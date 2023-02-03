@@ -1,0 +1,24 @@
+set serveroutput on
+set verify off
+create or replace procedure sushvi_emp
+(
+ppersonid htd.personid%type;
+plastname htd.lastname%type;
+pfirstname htd.firstname%type;
+paddress    htd.address%type;
+pcity       htd.city%type;
+
+)
+AS
+BEGIN
+
+insert into htd(personid,lastname,firstname,address,city)values(ppersonid,plastname,pfirstname,paddress,pcity);
+commit;
+
+
+
+EXEC sushvi_emp('1','ss','ss','sss','sss')
+
+
+END;
+/
